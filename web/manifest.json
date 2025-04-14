@@ -1,6 +1,6 @@
 {
-    "name": "ve_amor_app",
-    "short_name": "ve_amor_app",
+    "name": "DTU_LOVE_APP",
+    "short_name": "DTU_LOVE_APP",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
