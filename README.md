@@ -1,4 +1,4 @@
-# ve_amor_app
+# DTU_LOVE_APP
 
 A new Flutter project.
 
