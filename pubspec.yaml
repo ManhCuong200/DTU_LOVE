@@ -1,4 +1,5 @@
-name: ve_amor_app
+
+name: DTU_LOVE_APP
 description: "A new Flutter project."
 publish_to: 'none'
 
@@ -87,3 +88,5 @@ flutter:
           weight: 600
         - asset: assets/fonts/Poppins-Bold.ttf
           weight: 800
+
+// File dành cho Người 4: Cấu hình build & đa nền tảng
