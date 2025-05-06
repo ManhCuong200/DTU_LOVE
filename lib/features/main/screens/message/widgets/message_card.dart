@@ -47,6 +47,10 @@ class TMessageCard extends StatelessWidget {
                     height: 60,
                     fit: BoxFit.cover,
                   ),
+                CircleAvatar(
+                  radius: 30,
+                  backgroundColor: TColors.primary.withOpacity(0.8),
+                  backgroundImage: AssetImage(imagePath),
                 ),
                 if (isActive)
                   Positioned(
@@ -77,6 +81,8 @@ class TMessageCard extends StatelessWidget {
                             .textTheme
                             .bodyLarge!
                             .copyWith(fontWeight: FontWeight.bold),
+                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.bold),
+
                       ),
                       const SizedBox(width: TSizes.xs),
                       if (isVerify)
@@ -104,4 +110,3 @@ class TMessageCard extends StatelessWidget {
     );
   }
 }
-

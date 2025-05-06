@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:DTU_LOVE/data/repositories/user/user_repository.dart';
+<<<<<<< HEAD
 import 'package:DTU_LOVE/features/personalization/models/user_model.dart';
+=======
+import 'package:DTU_LOVE/features/authentication/models/user_model.dart';
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
 import 'package:DTU_LOVE/features/authentication/screens/signup/signup_imports.dart';
 import 'package:DTU_LOVE/generated/assets.dart';
 import 'package:DTU_LOVE/utils/helpers/network_manager.dart';

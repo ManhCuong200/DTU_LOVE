@@ -5,17 +5,24 @@ class TLoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     final controller = Get.put(LoginController());
     return Form(
       key: controller.loginFormKey,
+=======
+    return Form(
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
         child: Column(
           children: [
             // Email
             TextFormField(
+<<<<<<< HEAD
               controller: controller.emailController,
               validator: (value) => TValidator.validateEmail(value),
+=======
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
               decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.direct_right),
                 labelText: TTexts.email,
@@ -25,6 +32,7 @@ class TLoginForm extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwInputFields),
 
             // Password
+<<<<<<< HEAD
             Obx(
               () => TextFormField(
                 controller: controller.passwordController,
@@ -40,6 +48,13 @@ class TLoginForm extends StatelessWidget {
                   ),
                 ),
                 obscureText: controller.hidePassword.value,
+=======
+            TextFormField(
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Iconsax.password_check),
+                labelText: TTexts.password,
+                suffixIcon: Icon(Iconsax.eye_slash),
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
               ),
             ),
 
@@ -50,6 +65,7 @@ class TLoginForm extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // Remember Me
+<<<<<<< HEAD
                 Obx(
                   () => Row(
                     children: [
@@ -62,6 +78,16 @@ class TLoginForm extends StatelessWidget {
                       const Text(TTexts.rememberMe),
                     ],
                   ),
+=======
+                Row(
+                  children: [
+                    Checkbox(
+                      value: false,
+                      onChanged: (value) {},
+                    ),
+                    const Text(TTexts.rememberMe),
+                  ],
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
                 ),
 
                 // Forget Password
@@ -80,9 +106,13 @@ class TLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
+<<<<<<< HEAD
                 onPressed: () {
                   controller.signInWithEmailAndPassword();
                 },
+=======
+                onPressed: () => Get.to(() => const NavigationMenu()),
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
                 child: const Text(TTexts.signIn),
               ),
             ),

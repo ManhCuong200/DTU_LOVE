@@ -6,4 +6,8 @@ import 'package:DTU_LOVE/utils/constants/sizes.dart';
 
 import '../../../../../common/widgets/loaders/shimmer.dart';
 
+import 'package:flutter/material.dart';
+import 'package:DTU_LOVE/utils/constants/colors.dart';
+import 'package:DTU_LOVE/utils/constants/sizes.dart';
+
 part 'message_card.dart';

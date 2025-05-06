@@ -63,6 +63,22 @@ class MessageScreen extends StatelessWidget {
                         );
                       }
                     },
+                  SizedBox(
+                    height: 150,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      itemCount: 5,
+                      itemBuilder: (context, index) {
+                        if (index == 0) {
+                          // New Likes Match Card
+                          return const NewMatchLikesCard();
+                        } else {
+                          // User card
+                          return const TNewMatchUserCard();
+                        }
+                      },
+                    ),
                   )
                 ],
               ),
@@ -118,6 +134,24 @@ class MessageScreen extends StatelessWidget {
                               },
                             )
                           ],
+                  ListView.builder(
+                    padding: EdgeInsets.zero,
+                    itemCount: 2,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) {
+                      if (index == 0) {
+                        return const TMessageCard(
+                          imagePath: TImages.lightAppLogo,
+                          name: 'DTU_LOVE',
+                          message: 'Upgrade now to start matching...',
+                          isVerify: true,
+                        );
+                      } else {
+                        return const TMessageCard(
+                          imagePath: TImages.girl,
+                          name: 'Yogurt',
+                          message: 'Hello',
                         );
                       }
                     },

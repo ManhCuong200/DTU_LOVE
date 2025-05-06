@@ -24,12 +24,17 @@ class InitialRecentPicturePage extends StatelessWidget {
             Text(TTexts.subTitleRecentPicture, style: Theme.of(context).textTheme.bodySmall),
             const SizedBox(height: TSizes.spaceBtwSections),
 
+<<<<<<< HEAD
             const TInitialProFilePhoto(),
+=======
+            const TProFilePhoto(),
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
 
             const Spacer(),
 
             // Button Next
             TBottomButton(
+<<<<<<< HEAD
               onPressed: () async {
                 if (controller.newPhotos.isEmpty || controller.newPhotos.length < 2) {
                   TLoaders.errorSnackBar(
@@ -42,6 +47,9 @@ class InitialRecentPicturePage extends StatelessWidget {
                 await controller.saveImages();
                 controller.updateInitialInformation();
               },
+=======
+              onPressed: controller.updateInitialInformation,
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
               textButton: 'Next',
             )
           ],

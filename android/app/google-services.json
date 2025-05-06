@@ -10,6 +10,7 @@
         "mobilesdk_app_id": "1:266111988879:android:136a9e87861a6e0a19acfa",
         "android_client_info": {
           "package_name": "com.example.dtu_love_app"
+          "package_name": "com.example.dtuloveapp"
         }
       },
       "oauth_client": [
@@ -18,6 +19,7 @@
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.dtu_love_app",
+            "package_name": "com.example.dtuloveapp",
             "certificate_hash": "1a043a1f98d3afed4b85fd5b9dabc43ac22d1816"
           }
         },

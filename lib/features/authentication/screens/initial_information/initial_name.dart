@@ -8,7 +8,11 @@ class InitialNamePage extends StatelessWidget {
     final controller = Get.put(InitialInformationController());
     final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
+<<<<<<< HEAD
       appBar: const TAppbar(showBackArrow: false),
+=======
+      appBar: const TAppbar(showBackArrow: true),
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
       body: Padding(
         padding: const EdgeInsets.all(TSizes.defaultSpace),
         child: Column(

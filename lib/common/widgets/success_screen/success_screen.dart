@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/constants/text_strings.dart';
+<<<<<<< HEAD
+=======
+import '../../../utils/helpers/helper_functions.dart';
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({

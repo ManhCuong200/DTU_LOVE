@@ -3,6 +3,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:DTU_LOVE/common/widgets/success_screen/success_screen.dart';
 import 'package:DTU_LOVE/data/repositories/authentication/authentication_repository.dart';
+<<<<<<< HEAD
+=======
+import 'package:DTU_LOVE/features/authentication/screens/initial_information/initial_information_imports.dart';
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
 import 'package:DTU_LOVE/generated/assets.dart';
 import 'package:DTU_LOVE/utils/constants/text_strings.dart';
 import 'package:DTU_LOVE/utils/popups/loaders.dart';
@@ -25,7 +29,11 @@ class VerifyEmailController extends GetxController {
       TLoaders.successSnackBar(
           title: 'Email Sent', message: 'Please Check your inbox and verify your email.');
     } catch (e) {
+<<<<<<< HEAD
       // TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
+=======
+      TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
     }
   }
 
@@ -41,9 +49,13 @@ class VerifyEmailController extends GetxController {
             animation: Assets.animations72462CheckRegister,
             title: TTexts.yourAccountCreatedTitle,
             subTitle: TTexts.yourAccountCreatedSubTitle,
+<<<<<<< HEAD
             onPressed: () async {
               AuthenticationRepository.instance.screenRedirect();
             },
+=======
+            onPressed: () => Get.to(const InitialNamePage()),
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
           ),
         );
       }
@@ -59,9 +71,13 @@ class VerifyEmailController extends GetxController {
           animation: Assets.animations72462CheckRegister,
           title: TTexts.yourAccountCreatedTitle,
           subTitle: TTexts.yourAccountCreatedSubTitle,
+<<<<<<< HEAD
           onPressed: () async {
             AuthenticationRepository.instance.screenRedirect();
           },
+=======
+          onPressed: () => Get.to(const InitialNamePage()),
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
         ),
       );
     }

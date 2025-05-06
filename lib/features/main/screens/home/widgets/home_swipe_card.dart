@@ -9,7 +9,6 @@ class TSwipeCard extends StatelessWidget {
   final bool borderRadiusImage;
   final bool shadowImage;
   final String image;
-
   const TSwipeCard({
     super.key,
     required this.currentPhoto,
@@ -30,6 +29,9 @@ class TSwipeCard extends StatelessWidget {
       fit: StackFit.expand,
       children: [
         // Cached Image
+    return Stack(
+      children: [
+        // Image
         Container(
           width: heightWidthHomeDetail ? THelperFunctions.screenWidth() : null,
           height: heightWidthHomeDetail ? (THelperFunctions.screenHeight() * 0.6) - 25 : null,
@@ -46,6 +48,9 @@ class TSwipeCard extends StatelessWidget {
                 height: THelperFunctions.screenHeight(),
               ),
               errorWidget: (context, url, error) => const Icon(Icons.error, color: Colors.red),
+            image: const DecorationImage(
+              fit: BoxFit.cover,
+              image: AssetImage(TImages.girl),
             ),
           ),
         ),
@@ -63,6 +68,7 @@ class TSwipeCard extends StatelessWidget {
                 colors: dark
                     ? [TColors.black, Colors.transparent]
                     : [TColors.primary.withOpacity(0.8), Colors.transparent],
+                    : [TColors.primary.withOpacity(0.85), Colors.transparent],
               ),
             ),
           ),
@@ -76,6 +82,8 @@ class TSwipeCard extends StatelessWidget {
                 child: Container(
                   width: heightWidthHomeDetail ? THelperFunctions.screenWidth() : null,
                   height: heightWidthHomeDetail ? (THelperFunctions.screenHeight() * 0.6) - 25 : null,
+                  height:
+                      heightWidthHomeDetail ? (THelperFunctions.screenHeight() * 0.6) - 25 : null,
                   color: Colors.transparent,
                 ),
               ),
@@ -86,13 +94,14 @@ class TSwipeCard extends StatelessWidget {
                 child: Container(
                   width: heightWidthHomeDetail ? THelperFunctions.screenWidth() : null,
                   height: heightWidthHomeDetail ? (THelperFunctions.screenHeight() * 0.6) - 25 : null,
+                  height:
+                      heightWidthHomeDetail ? (THelperFunctions.screenHeight() * 0.6) - 25 : null,
                   color: Colors.transparent,
                 ),
               ),
             ),
           ],
         ),
-
         // Image Navigation Dots
         TImageNavigationDots(currentPhoto: currentPhoto, numberPhotos: numberPhotos),
       ],

@@ -34,6 +34,7 @@ class ForgetPasswordScreen extends StatelessWidget {
               child: TextFormField(
                 controller: controller.emailController,
                 validator: (value) => TValidator.validateEmail(value),
+              child: TextFormField(
                 decoration: const InputDecoration(
                   labelText: TTexts.email,
                   prefixIcon: Icon(Iconsax.direct_right),
@@ -49,6 +50,8 @@ class ForgetPasswordScreen extends StatelessWidget {
                 onPressed: () {
                   controller.sendPasswordResetEmail();
                 },
+                onPressed: () => Get.to(()=> const ResetPasswordScreen()),
+
                 child: const Text(TTexts.submit),
               ),
             ),

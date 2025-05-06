@@ -13,6 +13,13 @@ class TNewMatchUserCard extends StatelessWidget {
 
   final String name;
   final String image;
+import 'package:flutter/material.dart';
+import 'package:DTU_LOVE/utils/constants/image_strings.dart';
+import 'package:DTU_LOVE/utils/constants/sizes.dart';
+
+class TNewMatchUserCard extends StatelessWidget {
+  const TNewMatchUserCard({super.key});
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +41,11 @@ class TNewMatchUserCard extends StatelessWidget {
                 radius: TSizes.borderRadiusSm,
               ),
               errorWidget: (context, url, error) => const Icon(Icons.error, color: Colors.red),
+            child: Image.asset(
+              TImages.girl,
+              width: 110,
+              height: 120,
+              fit: BoxFit.cover,
             ),
           ),
           const SizedBox(height: TSizes.xs),
@@ -43,9 +55,16 @@ class TNewMatchUserCard extends StatelessWidget {
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
+            'Yogurt',
+            style: Theme.of(context)
+                .textTheme
+                .labelLarge!
+                .copyWith(fontWeight: FontWeight.w600),
           ),
         ],
       ),
     );
   }
+
+}
 }

@@ -25,7 +25,11 @@ class InitialInterestedPage extends StatelessWidget {
             GestureDetector(
               onTap: () => controller.updateWantSeeing(TTexts.women),
               child: Obx(() =>
+<<<<<<< HEAD
                   optionContainer(context, TTexts.women, controller.selectedWantSeeing.value == TTexts.women)),
+=======
+                  optionContainer(context, TTexts.women, controller.selectWantSeeing.value == TTexts.women)),
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
             ),
             const SizedBox(height: TSizes.spaceBtwItems),
 
@@ -33,7 +37,11 @@ class InitialInterestedPage extends StatelessWidget {
             GestureDetector(
               onTap: () => controller.updateWantSeeing(TTexts.men),
               child: Obx(() =>
+<<<<<<< HEAD
                   optionContainer(context, TTexts.men, controller.selectedWantSeeing.value == TTexts.men)),
+=======
+                  optionContainer(context, TTexts.men, controller.selectWantSeeing.value == TTexts.men)),
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
             ),
             const SizedBox(height: TSizes.spaceBtwItems),
 
@@ -41,14 +49,22 @@ class InitialInterestedPage extends StatelessWidget {
             GestureDetector(
               onTap: () => controller.updateWantSeeing(TTexts.everyone),
               child: Obx(() => optionContainer(
+<<<<<<< HEAD
                   context, TTexts.everyone, controller.selectedWantSeeing.value == TTexts.everyone)),
+=======
+                  context, TTexts.everyone, controller.selectWantSeeing.value == TTexts.everyone)),
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
             ),
 
             const Spacer(),
 
             // Button Next
             Obx(() {
+<<<<<<< HEAD
               final isEnabled = controller.selectedWantSeeing.value.isNotEmpty;
+=======
+              final isEnabled = controller.selectWantSeeing.value.isNotEmpty;
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
               return TBottomButton(
                 onPressed: isEnabled ? () {
                   controller.saveWantSeeing();

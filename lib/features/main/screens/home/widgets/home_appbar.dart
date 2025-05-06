@@ -30,8 +30,8 @@ class THomeAppBar extends StatelessWidget {
             width: 50,
             height: 70,
             dark
-                ? 'assets/logos/t-store-splash-logo-white.png'
-                : 'assets/logos/t-store-splash-logo-black.png',
+                ? 'assets/logos/DTU_LOVE.png'
+                : 'assets/logos/DTU_LOVE.png',
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

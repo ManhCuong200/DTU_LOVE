@@ -8,6 +8,7 @@ class OnBoardingNextButton extends StatelessWidget {
     final dark = THelperFunctions.isDarkMode(context);
     final controller = OnBoardingController.instance;
     return Positioned(
+
       right: TSizes.defaultSpace + 2,
       bottom: TDeviceUtils.getBottomNavigationBarHeight(),
       child: Obx(
@@ -29,6 +30,18 @@ class OnBoardingNextButton extends StatelessWidget {
                   color: TColors.white,
                 ),
         ),
+
+      right: TSizes.defaultSpace,
+      bottom: TDeviceUtils.getBottomNavigationBarHeight(),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: const CircleBorder(),
+          backgroundColor: dark ? TColors.primary : TColors.primary,
+        ),
+        onPressed: () {
+          controller.nextPage();
+        },
+        child: const Icon(Iconsax.arrow_right_3, color: TColors.white,),
       ),
     );
   }

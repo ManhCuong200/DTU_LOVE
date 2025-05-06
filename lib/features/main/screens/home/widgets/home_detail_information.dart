@@ -1,5 +1,6 @@
 part of 'widget_imports.dart';
 
+
 class THomeDetailInformation extends StatelessWidget {
   const THomeDetailInformation(
     this.index, {
@@ -16,11 +17,23 @@ class THomeDetailInformation extends StatelessWidget {
   final String name;
   final String age;
 
+  class THomeDetailInformation extends StatefulWidget {
+  const THomeDetailInformation(this.index, {super.key});
+
+  final int index;
+
+  @override
+  State<THomeDetailInformation> createState() => _THomeDetailInformationState();
+}
+
+class _THomeDetailInformationState extends State<THomeDetailInformation> {
+  int numberPhotos = 4;
+  int currentPhoto = 0;
+
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     final controller = HomeController.instance;
-
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -36,6 +49,7 @@ class THomeDetailInformation extends StatelessWidget {
                       width: THelperFunctions.screenWidth(),
                       height: THelperFunctions.screenHeight() * 0.6,
                       child: Hero(
+
                         tag: 'imageTage$index',
                         child: Stack(
                           children: [
@@ -59,13 +73,41 @@ class THomeDetailInformation extends StatelessWidget {
                                 currentPhoto: controller.currentPhotoIndex.value,
                                 numberPhotos: numberOfPhoto,
                               ),
+
+                        tag: 'imageTage${widget.index}',
+                        child: Stack(
+                          children: [
+                            // Image
+                            TSwipeCard(
+                              currentPhoto: currentPhoto,
+                              numberPhotos: numberPhotos,
+                              heightWidthHomeDetail: true,
+                              borderRadiusImage: false,
+                              shadowImage: false,
+                              onLeftTap: () {
+                                if (currentPhoto > 0) setState(() => currentPhoto -= 1);
+                              },
+                              onRightTap: () {
+                                if (currentPhoto < numberPhotos - 1) {
+                                  setState(() => currentPhoto += 1);
+                                }
+                              },
+                            ),
+
+                            // Dot Image Navigation
+                            TImageNavigationDots(
+                              currentPhoto: currentPhoto,
+                              numberPhotos: numberPhotos,
                             ),
 
                             // Arrow Down
                             Align(
                               alignment: Alignment.bottomRight,
                               child: Padding(
+
                                 padding: const EdgeInsets.only(right: 16, bottom: 10),
+
+                                padding: const EdgeInsets.only(right: 16),
                                 child: Material(
                                   color: TColors.primary,
                                   elevation: 3,
@@ -76,8 +118,12 @@ class THomeDetailInformation extends StatelessWidget {
                                       Navigator.pop(context);
                                     },
                                     child: Container(
+
                                       height: 40,
                                       width: 40,
+
+                                      height: 50,
+                                      width: 50,
                                       decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
                                       ),
@@ -107,6 +153,11 @@ class THomeDetailInformation extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(TSizes.defaultSpace),
+                          padding: const EdgeInsets.only(
+                            left: TSizes.defaultSpace,
+                            right: TSizes.defaultSpace,
+                            bottom: TSizes.defaultSpace,
+                          ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -114,11 +165,14 @@ class THomeDetailInformation extends StatelessWidget {
                                 children: [
                                   // Name
                                   Text(name, style: Theme.of(context).textTheme.headlineMedium),
+                                  Text('Yogurt', style: Theme.of(context).textTheme.headlineMedium),
                                   const SizedBox(width: TSizes.sm),
 
                                   // Age
                                   Text(
                                     age,
+                                    '20',
+
                                     style: Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 25),
                                   )
                                 ],
@@ -188,11 +242,18 @@ class THomeDetailInformation extends StatelessWidget {
                               Container(
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(30),
+
                                   color: dark ? Colors.black.withOpacity(0.4) : TColors.grey,
                                 ),
                                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
                                 child: Text('Take care of yourself',
                                     style: Theme.of(context).textTheme.bodyMedium),
+
+                                  color: dark ?Colors.black.withOpacity(0.4) :TColors.grey,
+                                ),
+                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+                                child: Text('Take care of yourself', style: Theme.of(context).textTheme.bodyMedium),
+
                               ),
                             ],
                           ),

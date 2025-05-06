@@ -14,7 +14,10 @@ class TAppbar extends StatelessWidget implements PreferredSizeWidget {
     this.leadingIcon,
     this.actions,
     this.leadingOnPressed,
+<<<<<<< HEAD
     this.isCenterTitle = false,
+=======
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
   });
 
   final Widget? title;
@@ -22,7 +25,10 @@ class TAppbar extends StatelessWidget implements PreferredSizeWidget {
   final IconData? leadingIcon;
   final List<Widget>? actions;
   final VoidCallback? leadingOnPressed;
+<<<<<<< HEAD
   final bool isCenterTitle;
+=======
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +39,21 @@ class TAppbar extends StatelessWidget implements PreferredSizeWidget {
         automaticallyImplyLeading: false,
         leading: showBackArrow
             ? IconButton(
+<<<<<<< HEAD
                 onPressed: () => Get.back(), icon: const Icon(Iconsax.arrow_left, color: TColors.primary))
+=======
+                onPressed: () => Get.back(),
+                icon: const Icon(Iconsax.arrow_left, color: TColors.primary))
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
             : leadingIcon != null
                 ? IconButton(onPressed: () => leadingOnPressed, icon: Icon(leadingIcon))
                 : null,
         title: title,
         actions: actions,
+<<<<<<< HEAD
         centerTitle: isCenterTitle,
+=======
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
       ),
     );
   }

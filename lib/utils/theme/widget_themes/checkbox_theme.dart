@@ -8,9 +8,12 @@ class TCheckboxTheme {
 
   /// Customizable Light Text Theme
   static CheckboxThemeData lightCheckboxTheme = CheckboxThemeData(
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(TSizes.xs)),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(TSizes.xs)),D
     checkColor: WidgetStateProperty.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
+
+    checkColor: MaterialStateProperty.resolveWith((states) {
+      if (states.contains(MaterialState.selected)) {
         return TColors.white;
       } else {
         return TColors.black;
@@ -18,6 +21,8 @@ class TCheckboxTheme {
     }),
     fillColor: WidgetStateProperty.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
+    fillColor: MaterialStateProperty.resolveWith((states) {
+      if (states.contains(MaterialState.selected)) {
         return TColors.primary;
       } else {
         return Colors.transparent;
@@ -30,6 +35,8 @@ class TCheckboxTheme {
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(TSizes.xs)),
     checkColor: WidgetStateProperty.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
+    checkColor: MaterialStateProperty.resolveWith((states) {
+      if (states.contains(MaterialState.selected)) {
         return TColors.white;
       } else {
         return TColors.black;
@@ -37,6 +44,8 @@ class TCheckboxTheme {
     }),
     fillColor: WidgetStateProperty.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
+    fillColor: MaterialStateProperty.resolveWith((states) {
+      if (states.contains(MaterialState.selected)) {
         return TColors.primary;
       } else {
         return Colors.transparent;

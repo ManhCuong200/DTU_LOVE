@@ -17,7 +17,11 @@ class SettingsScreen extends StatelessWidget {
                   TAppbar(
                     title: Text(
                       'Account',
+
                       style: Theme.of(context).textTheme.headlineMedium!.apply(color: TColors.white),
+
+                      style:
+                          Theme.of(context).textTheme.headlineMedium!.apply(color: TColors.white),
                     ),
                   ),
 
@@ -81,6 +85,7 @@ class SettingsScreen extends StatelessWidget {
                     trailing: Switch(
                       activeColor: TColors.primary,
                       value: true,
+                      value: false,
                       onChanged: (value) {},
                     ),
                     icon: Iconsax.image,
@@ -95,6 +100,7 @@ class SettingsScreen extends StatelessWidget {
               padding: const EdgeInsets.only(right: 10),
               child: SizedBox(
                 width: MediaQuery.of(context).size.width,
+                width: THelperFunctions.screenWidth(),
                 height: 250,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -115,7 +121,6 @@ class SettingsScreen extends StatelessWidget {
                 ),
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: SizedBox(

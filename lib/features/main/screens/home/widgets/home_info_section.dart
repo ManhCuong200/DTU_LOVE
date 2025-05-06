@@ -14,6 +14,12 @@ class TInfoSection extends StatelessWidget {
     required this.age,
     required this.image,
     required this.numberOfPhotos,
+  final String content;
+  final int index;
+
+  const TInfoSection({super.key,
+    required this.content,
+    required this.index,
   });
 
   @override
@@ -32,6 +38,15 @@ class TInfoSection extends StatelessWidget {
 
                 // Age
                 Text(age, style: const TextStyle(fontSize: 25, color: TColors.white)),
+
+                Text(
+                    content,
+                    style:
+                        Theme.of(context).textTheme.headlineMedium!.copyWith(color: TColors.white)),
+                const SizedBox(width: 10),
+
+                // Age
+                const Text('20', style: TextStyle(fontSize: 25, color: TColors.white)),
               ],
             ),
 
@@ -49,6 +64,7 @@ class TInfoSection extends StatelessWidget {
                     name: name,
                     numberOfPhoto: numberOfPhotos,
                   ),
+                  screen: THomeDetailInformation(index),
                 );
               },
               icon: const Icon(CupertinoIcons.info_circle_fill, color: TColors.white, size: 25),

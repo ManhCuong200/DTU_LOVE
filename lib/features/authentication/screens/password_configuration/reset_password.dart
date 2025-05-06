@@ -7,6 +7,7 @@ class ResetPasswordScreen extends StatelessWidget {
   });
 
   final String email;
+  const ResetPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +38,9 @@ class ResetPasswordScreen extends StatelessWidget {
               // Email & Title & Subtitle
               Text(email, style: Theme.of(context).textTheme.bodyMedium, textAlign: TextAlign.center),
               const SizedBox(height: TSizes.spaceBtwItems),
+              // // Email & Title & Subtitle
+              // Text(email, style: Theme.of(context).textTheme.bodyMedium, textAlign: TextAlign.center),
+              // const SizedBox(height: TSizes.spaceBtwItems),
 
               Text(
                 TTexts.changeYourPasswordTitle,
@@ -68,6 +72,7 @@ class ResetPasswordScreen extends StatelessWidget {
                   onPressed: () {
                     ForgetPasswordController.instance.resendPasswordResetEmail(email);
                   },
+                  onPressed: () {},
                   child: const Text(
                     TTexts.resendEmail,
                     style: TextStyle(color: TColors.primary),

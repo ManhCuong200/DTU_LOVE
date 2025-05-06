@@ -16,7 +16,11 @@ class InitialInformationController extends GetxController {
   final userName = TextEditingController();
   final dateOfBirth = TextEditingController();
   final selectedGender = ''.obs;
+<<<<<<< HEAD
   final selectedWantSeeing = ''.obs;
+=======
+  final selectWantSeeing = ''.obs;
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
   final newPhotos = <String>[].obs;
 
   // Temporary Model To Save information
@@ -29,7 +33,11 @@ class InitialInformationController extends GetxController {
 
   // Update WantSeeing
   void updateWantSeeing(String wantSeeing) {
+<<<<<<< HEAD
     selectedWantSeeing.value = wantSeeing;
+=======
+    selectWantSeeing.value = wantSeeing;
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
   }
 
   // Pictures
@@ -94,20 +102,29 @@ class InitialInformationController extends GetxController {
 
   // The Function Stores A Temporary Gender
   void saveWantSeeing() {
+<<<<<<< HEAD
     if (selectedWantSeeing.value.isEmpty) {
+=======
+    if (selectWantSeeing.value.isEmpty) {
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
       TLoaders.errorSnackBar(
         title: 'Who are you interested in seeing is not selected',
         message: 'Please select interested in seeing before proceeding!',
       );
       return;
     }
+<<<<<<< HEAD
     userTempData['WantSeeing'] = selectedWantSeeing.value;
+=======
+    userTempData['WantSeeing'] = selectWantSeeing.value;
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
     Get.to(() => const InitialRecentPicturePage());
   }
 
   // The Function Stores A Temporary List of Photos
   Future<void> saveImages() async {
     try {
+<<<<<<< HEAD
       // Start Loading
       TFullScreenLoader.openLoadingDialog(
         'We are processing your information...',
@@ -121,12 +138,32 @@ class InitialInformationController extends GetxController {
       TLoaders.errorSnackBar(title: 'Upload Failed', message: e.toString());
     } finally {
       TFullScreenLoader.stopLoading();
+=======
+      if (newPhotos.isNotEmpty) {
+        // Upload all images to Firebase Storage
+        List<String> uploadedUrls = await userRepository.uploadImages(newPhotos);
+
+        // Save the URLs in the temporary user data map
+        userTempData['ProfilePictures'] = uploadedUrls;
+      }
+    } catch (e) {
+      // Handle the exception
+      TLoaders.errorSnackBar(title: 'Upload Failed', message: e.toString());
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
     }
   }
 
   // Update Initial Information
   Future<void> updateInitialInformation() async {
     try {
+<<<<<<< HEAD
+=======
+
+      // Start Loading
+      TFullScreenLoader.openLoadingDialog(
+          'We are processing your information...', Assets.animations141594AnimationOfDocer);
+
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
       // Check Internet Connectivity
       final isConnect = await NetworkManager.instance.isConnected();
       if (!isConnect) {
@@ -135,6 +172,24 @@ class InitialInformationController extends GetxController {
         return;
       }
 
+<<<<<<< HEAD
+=======
+      // Save user name
+      saveName();
+
+      // Save birthday
+      saveBirthday();
+
+      // Save gender
+      saveGender();
+
+      // Save wantSeeing
+      saveWantSeeing();
+
+      // Save images
+      await saveImages();
+
+>>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
       // Update user data in Firebase Firestore
       await userRepository.updateSingleField(userTempData);
 
