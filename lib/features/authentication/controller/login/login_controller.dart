@@ -32,7 +32,7 @@ class LoginController extends GetxController {
   Future<void> signInWithEmailAndPassword() async {
     try {
       // Start Loading
-      TFullScreenLoader.openLoadingDialog('Logging you in VeAmor', Assets.animations141594AnimationOfDocer);
+      TFullScreenLoader.openLoadingDialog('Logging you in DTU_LOVE', Assets.animations141594AnimationOfDocer);
 
       // Check Internet Connectivity
       final isConnect = await NetworkManager.instance.isConnected();
@@ -76,7 +76,7 @@ class LoginController extends GetxController {
   Future<void> signInWithGoogle() async {
     try {
       // Start Loading
-      TFullScreenLoader.openLoadingDialog('Logging you in VeAmor', Assets.animations141594AnimationOfDocer);
+      TFullScreenLoader.openLoadingDialog('Logging you in DTU_LOVE', Assets.animations141594AnimationOfDocer);
 
       // Check Internet Connectivity
       final isConnect = await NetworkManager.instance.isConnected();
