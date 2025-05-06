@@ -19,7 +19,6 @@ import 'package:DTU_LOVE/utils/constants/sizes.dart';
 
 class TNewMatchUserCard extends StatelessWidget {
   const TNewMatchUserCard({super.key});
->>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
 
   @override
   Widget build(BuildContext context) {

@@ -96,11 +96,8 @@ class _InitialIdentityVerificationState extends State<InitialIdentityVerificatio
               ),
             ),
 
-<<<<<<< HEAD
             const Spacer(),
-=======
             Spacer(),
->>>>>>> 0ef12e2 (chức năng lấy và sửa thông tin cá nhân khi mới tạo tài khoản)
             // Button Next
             TBottomButton(
               onPressed: () => Get.to(() => const NavigationMenu()),
