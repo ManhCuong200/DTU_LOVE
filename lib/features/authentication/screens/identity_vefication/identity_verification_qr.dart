@@ -96,7 +96,7 @@ class _InitialIdentityVerificationState extends State<InitialIdentityVerificatio
               ),
             ),
 
-            Spacer(),
+            const Spacer(),
             // Button Next
             TBottomButton(
               onPressed: () => Get.to(() => const NavigationMenu()),

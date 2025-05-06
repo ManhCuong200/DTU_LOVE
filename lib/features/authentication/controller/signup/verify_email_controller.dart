@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:DTU_LOVE/common/widgets/success_screen/success_screen.dart';
 import 'package:DTU_LOVE/data/repositories/authentication/authentication_repository.dart';
-import 'package:DTU_LOVE/features/authentication/screens/initial_information/initial_information_imports.dart';
 import 'package:DTU_LOVE/generated/assets.dart';
 import 'package:DTU_LOVE/utils/constants/text_strings.dart';
 import 'package:DTU_LOVE/utils/popups/loaders.dart';

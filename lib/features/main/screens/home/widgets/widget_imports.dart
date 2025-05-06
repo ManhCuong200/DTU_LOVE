@@ -9,7 +9,6 @@ import 'package:swipe_cards/swipe_cards.dart';
 import 'package:DTU_LOVE/common/widgets/loaders/shimmer.dart';
 import 'package:DTU_LOVE/features/main/controller/home/home_controller.dart';
 import 'package:DTU_LOVE/utils/constants/colors.dart';
-import 'package:DTU_LOVE/utils/constants/image_strings.dart';
 import 'package:DTU_LOVE/utils/constants/sizes.dart';
 import 'package:DTU_LOVE/utils/helpers/helper_functions.dart';
 

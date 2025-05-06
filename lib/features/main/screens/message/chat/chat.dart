@@ -13,7 +13,7 @@ import '../../../../../utils/constants/colors.dart';
 import '../../../controller/message/message_controller.dart';
 
 class ChatPage extends StatefulWidget {
-  ChatPage({
+  const ChatPage({
     super.key,
     this.isNetworkImage = true,
     required this.imagePath,

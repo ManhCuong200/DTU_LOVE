@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:DTU_LOVE/features/authentication/controller/login/login_controller.dart';
 import 'package:DTU_LOVE/features/authentication/screens/signup/signup_imports.dart';
-import 'package:DTU_LOVE/navigation_menu.dart';
 import 'package:DTU_LOVE/utils/constants/colors.dart';
 import 'package:DTU_LOVE/utils/constants/image_strings.dart';
 import 'package:DTU_LOVE/utils/constants/sizes.dart';

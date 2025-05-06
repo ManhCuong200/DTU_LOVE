@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:DTU_LOVE/data/repositories/user/user_repository.dart';
 import 'package:DTU_LOVE/features/personalization/models/user_model.dart';

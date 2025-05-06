@@ -1,21 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:DTU_LOVE/common/widgets/appbar/appbar.dart';
 import 'package:DTU_LOVE/common/widgets/bottom_button/bottom_button.dart';
 import 'package:DTU_LOVE/features/authentication/controller/initial_information/initial_information_controller.dart';
-import 'package:DTU_LOVE/features/authentication/screens/identity_vefication/identity_verification_qr.dart';
-import 'package:DTU_LOVE/navigation_menu.dart';
 import 'package:DTU_LOVE/utils/constants/colors.dart';
 import 'package:DTU_LOVE/utils/constants/sizes.dart';
 import 'package:DTU_LOVE/utils/constants/text_strings.dart';
 import 'package:DTU_LOVE/utils/helpers/helper_functions.dart';
-import 'package:DTU_LOVE/utils/validators/validation.dart';
 
-import '../../../../common/widgets/question_section/question_section.dart';
 import '../../../../utils/popups/loaders.dart';
 import 'add_photo/initial_profile_photo.dart';
 
